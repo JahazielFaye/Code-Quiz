@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'monaco';
+}
+
+body{
+    background: whitesmoke;
+}
+
+::selection{
+    color: #fff;
+    background: plum;
+}
+
+.start button,
+.info-list,
+.quizbox,
+.resultbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.instruction.activeinfo,
+.quizbox.activeQuiz,
+.resultbox.activeResult{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.start button button{
+    font-size: 25px;
+    font-weight: 500;
+    color: indigo;
+    padding: 16px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+}
+
+.instruction{
+    width: 540px;
+    background: #fff;
+    border-radius: 7px;
+    transform: translate(-50%, -50%) scale (0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.instruction .info-title {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.instruction .info-list{
+    padding: 15px 30px;
+}
+
+.instruction .info-list .info{
+    margin: 5px 0;
+    font-size: 17px;
+}
+.instruction .info-list .info span{
+    font-weight:500;
+    color: #007bff;
+}
+.instruction .buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid lightgrey;
+}
+
+.instruction .buttons button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid indigo;
+    transition: all 0.3s ease;
+}
+
+.quizbox {
+    width: 550px;
+    background: rgb(103,206.253);
+    border-radius: 5px;
+    transform: translate(-50%, -50%)scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.quizbox header{
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
+    background:#fff;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
+}
+.quizbox header .title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+quizbox header .timer{
+    color:cornflowerblue;
+    background: #cce5ff;
+    
+}
