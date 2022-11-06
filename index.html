@@ -4,43 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/script.js"></script>
+    <script src="./quest.js"></script>
     <title>QuizforCode</title>
     <link rel="stylesheet" href="./Assets/style.css">
 </head>
 <body>
     <!--Quiz BUTTON-->
-    <div class="start button"><button>Start Quiz</button></div>
+    <div class="start_button"><button>Start Quiz</button></div>
 
-    <!--Rules Info-->
-    <div class="Instruction"><span>Quiz Rules</span></div>
-    <div class="Info-list">
-        <div class="info">1. You will only have <span> 15 seconds</span> per each question </div>
-        <div class="info">2. Once your answer is selected, it can't be undone </div>
-        <div class="info">3. Once time goes off, You won't be able to answer</div>
-        <div class="info">4. You can't exit from the Quiz if you started</div>
-        <div class="info">5. You'll get points on the basis of your correct answers </div>
+   <!--Main Info-->
+    <div class="container">
+        <div class="Quiz_Rules"><span>Quiz Rules</span></div>
+    <div class="rules-list">
+        <div class="rules">1. You will only have <span> 15 seconds</span> per each question </div>
+        <div class="rules">2. Once your answer is selected, it can't be undone </div>
+        <div class="rules">3. Once time goes off, You won't be able to answer</div>
+        <div class="rules">4. You can't exit from the Quiz if you started</div>
+        <div class="rules">5. You'll get points on the basis of your correct answers </div>
     </div>
     <div class ="buttons">
         <button class ="quit">Exit</button>
         <button class="restart">Continue</button>
     </div>
-</div>
-
+    </div>
+    
 <!--Quiz Container-->
-<div class="quizbox">
+<div class="quiz_box">
     <header>
         <div class="title">Code Quiz</div>
         <div class="timer">
-        <div class="time left">Time Left</div>
-        <div class="timer seconds">15</div>
+        <div class="time_left">Time Left</div>
+        <div class="timer_seconds">15</div>
         </div>
-        <div class="timer line"></div>
+        <div class="timer_line"></div>
     </header>
     <section>
-        <div class="text que"></div>
+        <div class="text_que"></div>
         <!--Javascript Quiz Question-->
     </div>
-    <div class ="option lists">
+    <div class ="option_lists">
         <!--Options-->
     </div>
     </section>
@@ -49,26 +52,29 @@
 <footer>
     <div class="total">
         </div>
-        <button class ="next button">Next Button</button>
+        <button class ="next_button">Next Button</button>
 </footer>
     </div>
   <!--Result Box-->
-  <div class="resultbox">
-    <div class="complete text">You've complete the Quiz</div>
-    <div class="score text">
+  <div class="result_box">
+    <div class="complete_text">You Have Completed the Quiz!</div>
+    <div class="score_text">
         <!--Score Results-->
     </div>
     <div class ="buttons">
         <button class="restart">Replay Quiz</button>
         <button class="quit">Exit Quit</button>
     </div>
-  </div>
+  <form>
+    <div>
+        <label for="usern">Username:</label>
+        <input type="text" id="usern" name="name" />
+    </div>
+    <div>
+        <button>Submit</button>
+    </div>
+  </form>
 
-  <!--Question/Options from JavaScript-->
-  <script scr="js/questions.js"></script>
-
-  <!--Javascript Code-->
-  <script src="js/script.js"></script>
 
 
 
