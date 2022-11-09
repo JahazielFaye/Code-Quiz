@@ -33,7 +33,7 @@ let widthValue = 0;
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
-// if Next Que button clicked
+// function if Next Que button clicked
 next_btn.onclick = function () {
     if (que_count < questions.length - 1) { //if question count is less than total question length
         que_count++; //increment the que_count value
@@ -44,12 +44,12 @@ next_btn.onclick = function () {
         clearInterval(counterLine); //clear counterLine
         startTimer(timeValue); //calling startTimer function
         startTimerLine(widthValue); //calling startTimerLine function
-        timeText.textContent = "Time Left"; //change the timeText to Time Left
+        timeText.textContent = "Time Left"; 
         next_btn.classList.remove("show"); //hide the next button
     } else {
-        clearInterval(counter); //clear counter
-        clearInterval(counterLine); //clear counterLine
-        showResult(); //calling showResult function
+        clearInterval(counter); 
+        clearInterval(counterLine);
+        showResult(); 
     }
 }
 
@@ -57,7 +57,7 @@ next_btn.onclick = function () {
 function showQuestions(index) {
     const que_text = document.querySelector(".que_text");
 
-    //creating a new span and div tag for question and option and passing the value using array index
+    // new span and div tag for question and option and passing the value using array index
     let que_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '</span>';
     let option_tag = '<div class="option"><span>' + questions[index].options[0] + '</span></div>'
         + '<div class="option"><span>' + questions[index].options[1] + '</span></div>'
@@ -75,7 +75,7 @@ function showQuestions(index) {
 
    
 }
- // you can add/remove questions here
+ // questions&answers starts here
  let questions = [
     {
         numb: 1,
@@ -173,19 +173,19 @@ function optionSelected(answer) {
     }
     next_btn.classList.add("show"); //show the next button if user selected any option
 }
-
+//Results <----->
 function showResult() {
 
-    container.classList.remove("activeInfo"); //hide info box
-    quiz_box.classList.remove("activeQuiz"); //hide quiz box
-    result_box.classList.add("activeResult"); //show result box
+    container.classList.remove("activeInfo"); //hides info box
+    quiz_box.classList.remove("activeQuiz"); //hidess quiz box
+    result_box.classList.add("activeResult"); //shows result box
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 3) { // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
         let scoreTag = '<span>and congrats!! You got <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
-    else if (userScore > 1) { // if user scored more than 1
+    else if (userScore > 1) { 
         let scoreTag = '<span>Awsome! You got <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
         scoreText.innerHTML = scoreTag;
     }
