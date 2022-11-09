@@ -10,3 +10,8 @@ and guide. this challenge test my skill in implementing new methods that I have 
 ### Link for the quiz --->
 
 * https://jahazielfaye.github.io/Code-Quiz/
+
+### Page Snippet
+
+![Page Snippet](./Assets/Screenshot%202022-11-09%20171236.png)
+
