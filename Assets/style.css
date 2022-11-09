@@ -14,7 +14,7 @@ body{
     background: plum;
 }
 
-.start button,
+.start_button,
 .rules-list,
 .quizbox,
 .resultbox {
@@ -46,7 +46,7 @@ body{
     cursor: pointer;
 }
 
-.Container {
+.container {
     width: 600px;
     background: #fff;
     border-radius: 7px;
